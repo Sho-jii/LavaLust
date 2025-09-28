@@ -29,97 +29,46 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
  *
  * @package LavaLust
  * @author Ronald M. Marasigan <ronald.marasigan@yahoo.com>
- * @since Version 1
+ * @since Version 4
  * @link https://github.com/ronmarasigan/LavaLust
  * @license https://opensource.org/licenses/MIT MIT License
  */
 
-/**
-* ------------------------------------------------------
-*  Class Controller
-* ------------------------------------------------------
- */
-class Controller
-{
-	/**
-	 * Controller Instance
-	 *
-	 * @var object
-	 */
-	private static $instance;
-	/**
-	 * Load class
-	 *
-	 * @var object
-	 */
-	public $call;
+/*
+|--------------------------------------------------------------------------
+| Enable/Disable Ember Helper
+|--------------------------------------------------------------------------
+|
+| Used for Enabling or Disabling Ember Helper
+|
+*/
+$config['ember_helper_enabled'] = FALSE;
 
-	/**
-	 * Dynamic Properties using __set and __get
-	 *
-	 * @var array
-	 */
-	public $properties = [];
+/*
+|--------------------------------------------------------------------------
+| Cache Path
+|--------------------------------------------------------------------------
+|
+| Used for Storing Cached Templates
+|
+*/
+$config['cache_path'] = ROOT_DIR . 'runtime/cache/';
 
-	/**
-	 * Set Dynamic Properties
-	 *
-	 * @param string $prop
-	 * @param string $val
-	 */
-	public function __set($prop, $val) {
-		$this->properties[$prop] = $val;
-	}
+/*
+|--------------------------------------------------------------------------
+| Views Path
+|--------------------------------------------------------------------------
+|
+| Used for Storing View Templates
+|
+*/
+$config['templates_path'] = APP_DIR . 'views/';
 
-	/**
-	 * Get Dynamic Properties
-	 *
-	 * @param string $prop
-	 * @return void
-	 */
-	public function __get($prop) {
-		if (array_key_exists($prop, $this->properties)) {
-			return $this->properties[$prop];
-		} else {
-			throw new Exception("Property $prop does not exist");
-		}
-	}
-
-	/**
-	 * Constructor
-	 */
-	public function __construct()
-	{
-		$this->before_action();
-
-		self::$instance = $this;
-
-		foreach (loaded_class() as $var => $class)
-		{
-			$this->properties[$var] = load_class($class);
-		}
-
-		$this->call = load_class('invoker', 'kernel');
-		$this->call->initialize();
-	}
-
-	/**
-     * Called before the controller action.
-     * Used to perform logic that needs to happen before each controller action.
-     *
-     */
-    public function before_action(){}
-
-	/**
-	 * Instance of controller
-	 *
-	 * @return object
-	 */
-	public static function instance()
-	{
-		return self::$instance;
-	}
-
-}
-
-?>
+/*
+|-------------------------------------------------------------------------- 
+| Auto Escape
+|--------------------------------------------------------------------------     
+| Used for Enabling or Disabling Auto Escape Output
+|
+*/
+$config['auto_escape'] = TRUE;

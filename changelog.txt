@@ -1,3 +1,43 @@
+LavaLust 4.4.0
+
+#Changelog
+
+1. Added a simple template engine called Ember Template Engine.
+2. Enhanced Session class by adding security feature like locking if security threats was detected.
+
+LavaLust 4.3.1
+
+#Changelog
+
+1. Critical bug fixed in Config class with get_config() and config_item() where loaded config is not merging with the default.
+
+LavaLust 4.3.0
+
+#Changelog
+
+1. Add support for HMVC. modules folder was added to /app
+2. Added lava file for CLI. Sample usage 'php lava make:controller ControllerName'
+
+LavaLust 4.2.5
+
+#Changelog
+
+1. Fixed bug in API class that strips authorization in render.com
+
+LavaLust 4.2.4
+
+#Changelog
+
+1. Updated the error_php.php from app/views/errors. Add content.
+2. Secure .htaccess for some points.
+3. Fixed Pagination bugs in tailwind theme.
+
+LavaLust 4.2.3
+
+#Changelog
+
+1. Updated the error_404.php from app/views/errors. Modern design.
+
 LavaLust 4.2.2
 
 #Changelog

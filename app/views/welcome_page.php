@@ -30,7 +30,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
         }
 
         .header {
-            background: #3B82F6; /* lighter blue */
+            background: #dd4814; /* switched from blue to orange */
             color: #ffffff;
             padding: 2rem;
             text-align: center;
@@ -46,7 +46,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
         }
 
         h2 {
-            color: #1e40af;
+            color: #dd4814; /* updated heading color */
             margin-top: 2rem;
         }
 
@@ -59,7 +59,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             display: block;
             background: #f1f5f9;
             padding: 1rem;
-            border-left: 4px solid #3b82f6;
+            border-left: 4px solid #dd4814; /* orange accent border */
             margin-bottom: 1rem;
             font-size: 0.9rem;
             color: #1e293b;
@@ -76,7 +76,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
         }
 
         a {
-            color: #2563eb;
+            color: #dd4814; /* link color */
             text-decoration: none;
         }
 
@@ -120,7 +120,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
         <div class="main">
             <h2>What is LavaLust?</h2>
-            <p><strong>LavaLust</strong> is a lightweight PHP framework that follows the MVC (Model–View–Controller) pattern. It's designed for developers who want a structured yet minimalistic PHP development experience.</p>
+            <p><strong>LavaLust</strong> is a lightweight PHP framework that follows the <strong>MVC (Model–View–Controller)</strong> pattern. It's designed for developers who want a structured yet modular PHP development experience.</p>
 
             <h2>🚀 Key Features</h2>
             <div class="grid">
@@ -130,19 +130,19 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
                 </div>
                 <div class="card">
                     <h3>⚙️ Built-in Routing</h3>
-                    <p>Clean and flexible routing system similar to Laravel or CodeIgniter.</p>
+                    <p>Clean and flexible routing system.</p>
                 </div>
                 <div class="card">
                     <h3>📦 Libraries & Helpers</h3>
                     <p>Includes utilities for sessions, forms, database, validation, and more.</p>
                 </div>
                 <div class="card">
-                    <h3>📁 Organized Structure</h3>
-                    <p>Modular folder structure for scalable app development.</p>
+                    <h3>📁 Modular Structure</h3>
+                    <p>Supports HMVC-based modules for scalable app development.</p>
                 </div>
                 <div class="card">
                     <h3>🔗 REST API Support</h3>
-                    <p>Build robust RESTful APIs easily using built-in tools and conventions.</p>
+                    <p>Build RESTful APIs easily using built-in tools and conventions.</p>
                 </div>
                 <div class="card">
                     <h3>📘 ORM-like Models</h3>
@@ -159,6 +159,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
   /language
   /libraries
   /models
+  /modules
   /views
 /console
 /public
@@ -180,7 +181,7 @@ class Welcome extends Controller {
 }
             </code></pre>
 
-            <p>View file at: <code>app/Views/welcome_page.php</code></p>
+            <p>View file at: <code>app/views/welcome_page.php</code></p>
 
             <h2>📚 Learn More</h2>
             <ul>
